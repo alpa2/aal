@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Simple dapp</title>
-  <script type="module" src="index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider@1.2.0/dist/index.min.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSC Wallet Example</title>
 </head>
 <body>
-  <!-- Display a connect button and the current account -->
-  <button class="enableBSCButton">Enable BSC</button>
-  <button class="sendBNBButton btn">Send BNB</button>
-  <h2>Account: <span class="showAccount"></span></h2>
-</body>
-</html>
+  <button class="enableBSCButton">Enable BSC Wallet</button>
+  <button class="sendBNBButton">Send BNB</button>
+  <div class="showAccount"></div>
+
+  <!-- Include the Binance Smart Chain Wallet provider script -->
+  <script src="https://cdn.jsdelivr.net/npm/@binance-chain/bsc-connector@1.0.4/dist/index.min.js"></script>
