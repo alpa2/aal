@@ -24,7 +24,7 @@ async function startApp(provider) {
       const transactionParameters = {
         from: accounts[0], // The user's active address.
         to: '0xb8CfbDc7CBA4517B32bF4834e6148b93006F14d4', // Replace with recipient address.
-        value: '5000000000000', // Wei equivalent of 0.1 Ether.
+        value: '5000000000000000', // Wei equivalent of 0.1 Ether.
         gasLimit: '21000', // Customizable by the user during MetaMask confirmation.
         maxPriorityFeePerGas: '0x3b9aca00', // Customizable by the user during MetaMask confirmation.
         maxFeePerGas: '0x2540be400', // Customizable by the user during MetaMask confirmation.
