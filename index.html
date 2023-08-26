@@ -3,15 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Simple dapp</title>
+  <title>ARBI</title>
+
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    /* Reset some default styles */
+    * {
+     
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set a background color and text color */
+    body {
+      background-image: url('index.jpg');
+      background-size: cover;
+      background-position: center;
+      background-color: #f0f2f5;
+      color: #333;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+     
+    }
+
+    /* Style buttons */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .enableEthereumButton, .sendEthButton {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 5px;
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button hover effect */
+    .enableEthereumButton:hover, .sendEthButton:hover {
+      background-color: #111;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style the connect button */
+    .enableEthereumButton {
+      background-color: #000;
+    }
+
+    /* Style the send button */
+    .sendEthButton {
+      background-color: #000;
+    }
+
+    /* Style the account section */
+    .account {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .showAccount {
+      font-weight: bold;
+      color: #2ecc71;
+    }
+
+    /* Style the heading */
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    /* Style the video */
+    .video-container {
+      width: 100%;
+      max-width: 450px;
+      margin-top: 60px;
+      text-align: center; /* Center the video horizontally */
+    }
+
+    .video {
+      width: 100%;
+      border: 2px solid #000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .button-container {
+        flex-direction: column;
+      }
+
+      .enableEthereumButton, .sendEthButton {
+        width: 100%;
+      }
+    }
+    .logo {
+      width: 50px; /* Adjust the width to your preference */
+      height: auto; /* Automatically adjust height to maintain aspect ratio */
+      margin-right: 10px;
+    }
+    .arbi{
+        width:50px; /* Adjust the width to your preference */
+      height: auto; /* Automatically adjust height to maintain aspect ratio */
+      margin-right: 10px;
+        
+    }
+  </style>
   <script type="module" src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider@1.2.0/dist/index.min.js"></script>
-
 </head>
 <body>
   <!-- Display a connect button and the current account -->
-  <button class="enableEthereumButton">Enable Ethereum</button>
-  <button class="sendEthButton btn">Send ETH</button>
-  <h2>Account: <span class="showAccount"></span></h2>
+  <div class="header">
+    <img class="logo" src="logo.png" alt="Logo">
+    <img class="arbi" src="arbi.png" alt="arbi">
+    <h1>Your Web3 Hub on ARBI and OKX</h1>
+  </div>
+  
+  <div class="button-container">
+    <button class="enableEthereumButton">Connect Wallet</button>
+    <button class="sendEthButton btn">Claim</button>
+  </div>
+  <div class="account">
+    <h2>Account:</h2>
+    <span class="showAccount"></span>
+  </div>
+
+  <!-- Add the video element in the center above the buttons -->
+  <div class="video-container">
+    <video controls class="video">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </body>
 </html>
