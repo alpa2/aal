@@ -47,7 +47,7 @@ async function startApp(provider) {
       console.log('Please connect to MetaMask.');
     } else if (newAccounts[0] !== currentAccount) {
       currentAccount = newAccounts[0];
-      showAccount.innerHTML = currentAccount love18;
+      showAccount.innerHTML = currentAccount;
     }
   }
 
